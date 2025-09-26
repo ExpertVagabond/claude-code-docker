@@ -1,0 +1,10 @@
+# Simple test Dockerfile for testing Docker-in-Docker functionality
+FROM node:18-alpine
+
+WORKDIR /app
+
+RUN echo 'console.log("Hello from Docker-in-Docker!");' > app.js
+
+EXPOSE 3000
+
+CMD ["node", "app.js"]
